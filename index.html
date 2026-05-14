@@ -4,252 +4,82 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>LDR Luis Del Rio Consultor</title>
-  <meta name="description" content="Consultoria en construccion y soluciones ambientales integrales. LDR Luis Del Rio Consultor."/>
-  <meta name="theme-color" content="#0a0a0a"/>
   <link rel="manifest" href="manifest.json"/>
-  <meta property="og:title" content="LDR Luis Del Rio Consultor"/>
-  <meta property="og:description" content="Diseño Estructural - Obra Civil - Soluciones Ambientales Integrales"/>
-  <meta property="og:type" content="website"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+SC:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <style>
     :root {
-      --bg:#0a0a0a; --bg2:#111111; --bg3:#181818;
-      --white:#f4f1ec; --white-dim:rgba(244,241,236,0.6);
-      --white-faint:rgba(244,241,236,0.12);
-      --accent:#c8a96e; --green:#4caf80;
-      --border:rgba(244,241,236,0.08);
-      --border-accent:rgba(200,169,110,0.3);
+      --bg:#0a0a0a; --bg2:#111111; --white:#f4f1ec; --accent:#c8a96e; --green:#4caf80;
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
     body{background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif;overflow-x:hidden}
 
-    /* HERO - Claridad máxima solicitada */
+    /* HERO - Imagen Clara sin filtros oscuros */
     .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;overflow:hidden}
     .hero-bg{
         position:absolute;inset:0;
-        /* Reemplazar con WhatsApp Image 2026-05-14 at 9.06.53 AM.jpeg */
-        background-image:url('hero_construccion.jpg'); 
+        background-image:url('foto1.jpeg'); /* Ruta para WhatsApp Image 2026-05-14 at 9.06.53 AM.jpeg */
         background-size:cover;
         background-position:center 30%;
-        animation:slowzoom 20s ease-in-out infinite alternate;
     }
-    /* Gradiente sutil inferior para legibilidad sin oscurecer toda la foto */
+    /* Gradiente sutil solo en la base para lectura del texto */
     .hero-bg::after{
         content:'';position:absolute;inset:0;
         background:linear-gradient(180deg, rgba(10,10,10,0) 60%, rgba(10,10,10,0.85) 100%);
     }
-    @keyframes slowzoom{from{transform:scale(1.04)}to{transform:scale(1.1)}}
 
-    .hero-nav{position:relative;z-index:10;padding:28px 24px 0;display:flex;align-items:flex-start;justify-content:space-between;animation:fadeDown 1s ease both}
-    .logo-block{display:flex;flex-direction:column;align-items:center}
-    .logo-ldr{font-family:'Cormorant SC',serif;font-size:2.6rem;font-weight:700;letter-spacing:0.18em;color:var(--white);line-height:1}
-    .logo-name{font-size:0.6rem;font-weight:400;letter-spacing:0.32em;text-transform:uppercase;color:var(--white-dim);margin-top:2px}
-    .logo-role{font-size:0.5rem;font-weight:300;letter-spacing:0.5em;text-transform:uppercase;color:var(--accent)}
-    .hero-deco svg{width:72px;height:54px;opacity:0.45}
+    .hero-nav{position:relative;z-index:10;padding:28px 24px;display:flex;justify-content:center;}
+    .logo-ldr{font-family:'Cormorant SC',serif;font-size:2.6rem;font-weight:700;letter-spacing:0.18em;color:var(--white);}
     
     .hero-content{position:relative;z-index:10;flex:1;display:flex;flex-direction:column;justify-content:flex-end;padding:0 24px 48px}
-    .hero-tag{font-size:0.58rem;letter-spacing:0.4em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;animation:fadeUp 1s ease both 0.3s}
-    .hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,13vw,4.5rem);line-height:0.95;letter-spacing:0.02em;animation:fadeUp 1s ease both 0.4s}
+    .hero-title{font-family:'Bebas Neue',sans-serif;font-size:4rem;line-height:0.95;letter-spacing:0.02em;}
     .hero-title span{color:var(--accent)}
-    .hero-sub{margin-top:14px;font-size:0.8rem;font-weight:300;color:var(--white-dim);line-height:1.65;max-width:310px;animation:fadeUp 1s ease both 0.5s}
-    
-    .hero-cta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;animation:fadeUp 1s ease both 0.6s}
-    .btn-primary{padding:13px 26px;background:var(--accent);border:none;border-radius:4px;color:var(--bg);font-family:'DM Sans',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;box-shadow:0 8px 24px rgba(200,169,110,0.28)}
-    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(200,169,110,0.42)}
-    .btn-outline{padding:13px 22px;background:transparent;border:1px solid var(--border-accent);border-radius:4px;color:var(--white);font-family:'DM Sans',sans-serif;font-size:0.7rem;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s}
-    .btn-outline:hover{background:var(--white-faint);border-color:var(--accent)}
+    .btn-primary{padding:13px 26px;background:var(--accent);border:none;border-radius:4px;color:var(--bg);font-weight:600;text-transform:uppercase;text-decoration:none;display:inline-block;margin-top:20px;}
 
-    @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
-    @keyframes fadeDown{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:translateY(0)}}
-
-    /* STATS */
-    .stats{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);display:grid;grid-template-columns:repeat(3,1fr)}
-    .stat{text-align:center;padding:22px 8px;border-right:1px solid var(--border)}
-    .stat:last-child{border-right:none}
-    .stat-n{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--accent);line-height:1}
-    .stat-l{font-size:0.56rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--white-dim);margin-top:4px;line-height:1.4}
-
-    /* SECTIONS */
-    .sec{padding:52px 24px 40px}
-    .eyebrow{font-size:0.57rem;letter-spacing:0.42em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
-    .sec-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.9rem,7vw,2.8rem);letter-spacing:0.03em;line-height:0.97}
-    .divider{width:38px;height:2px;background:var(--accent);margin:14px 0 28px}
-
-    /* SERVICE CARDS */
-    .srv-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
-    .srv-card{background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:18px 15px;transition:all 0.3s;position:relative;overflow:hidden}
-    .srv-card:hover{border-color:var(--border-accent);background:var(--bg3);transform:translateY(-2px)}
-    .srv-ico{font-size:1.7rem;margin-bottom:9px;display:block}
-    .srv-name{font-size:0.73rem;font-weight:600;letter-spacing:0.04em;color:var(--white);line-height:1.3}
-
-    /* AMBIENTAL - Colores vibrantes y reales */
-    .amb-sec{background:var(--bg2);border-top:1px solid var(--border)}
-    .amb-img-wrap{position:relative;margin-bottom:30px;height:210px;overflow:hidden}
-    .amb-img{
-        width:100%;height:100%;object-fit:cover;
-        /* Se eliminó filter:brightness para mostrar la imagen tal cual la original */
-    }
-    .amb-img-ov{
-        position:absolute;inset:0;
-        /* Gradiente solo en la base para que el texto sea legible */
-        background:linear-gradient(180deg,transparent 70%,var(--bg2) 100%);
-    }
-    .amb-badge{position:absolute;top:14px;right:14px;background:rgba(58,140,92,0.88);backdrop-filter:blur(8px);border:1px solid rgba(58,140,92,0.45);border-radius:4px;padding:5px 11px;font-size:0.56rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:#fff}
-    .amb-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,7vw,2.8rem);line-height:0.95;letter-spacing:0.02em}
+    /* SECCIÓN AMBIENTAL - Colores vibrantes */
+    .amb-sec{background:var(--bg2);padding-bottom:50px;}
+    .amb-img-wrap{position:relative;height:250px;width:100%;overflow:hidden;}
+    .amb-img{width:100%;height:100%;object-fit:cover;}
+    .amb-img-ov{position:absolute;inset:0;background:linear-gradient(180deg,transparent 70%,var(--bg2) 100%);}
+    .amb-title{font-family:'Bebas Neue',sans-serif;font-size:2.8rem;line-height:0.95;padding:20px 24px;}
     .amb-title .g{color:var(--green)}
-    .amb-desc{font-size:0.8rem;font-weight:300;color:var(--white-dim);line-height:1.65;margin-bottom:26px}
-    .amb-list{display:flex;flex-direction:column;gap:12px}
-    .amb-item{display:flex;align-items:flex-start;gap:13px;padding:13px 15px;background:var(--bg3);border:1px solid var(--border);border-radius:6px}
-    .amb-ico{font-size:1.3rem;flex-shrink:0;margin-top:1px}
-    .amb-txt{font-size:0.76rem;font-weight:400;color:var(--white-dim);line-height:1.55}
-    .amb-txt strong{display:block;color:var(--white);font-weight:500;margin-bottom:2px;font-size:0.79rem}
-    .car-tag{display:inline-flex;align-items:center;gap:6px;margin-top:18px;padding:7px 13px;background:rgba(76,175,128,0.09);border:1px solid rgba(76,175,128,0.28);border-radius:20px;font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--green)}
+    .car-tag{display:inline-block;margin:18px 24px;padding:7px 13px;background:rgba(76,175,128,0.09);border:1px solid rgba(76,175,128,0.28);border-radius:20px;font-size:0.62rem;color:var(--green);text-transform:uppercase;}
 
-    /* CONTACT */
-    .contact-sec{padding:52px 24px 40px}
-    .ct-cards{display:flex;flex-direction:column;gap:10px}
-    .ct-card{display:flex;align-items:center;gap:15px;padding:17px 19px;background:var(--bg2);border:1px solid var(--border);border-radius:6px;text-decoration:none;color:var(--white);transition:all 0.3s;position:relative}
-    .ct-card:hover{border-color:var(--border-accent);background:var(--bg3);transform:translateX(4px)}
-    .ct-ico{width:42px;height:42px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
-    .ci-wa{background:rgba(37,211,102,0.1)}
-    .ci-mail{background:rgba(200,169,110,0.1)}
-    .ct-meta{flex:1}
-    .ct-label{font-size:0.57rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--white-dim);margin-bottom:3px}
-    .ct-val{font-size:0.9rem;font-weight:500}
-    .wa-btn{margin-top:18px;width:100%;padding:17px;background:linear-gradient(135deg,#1a7a42,#0f5c30);border:none;border-radius:7px;color:#fff;font-family:'DM Sans',sans-serif;font-size:0.78rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 8px 24px rgba(26,122,66,0.32);transition:all 0.3s}
-
-    /* FOOTER */
-    footer{padding:30px 24px 22px;text-align:center;border-top:1px solid var(--border)}
-    .ft-logo{font-family:'Cormorant SC',serif;font-size:1.9rem;font-weight:700;letter-spacing:0.18em}
-    .ft-sub{font-size:0.57rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--white-dim);margin-top:4px}
-    .ft-brand{margin-top:22px;font-size:0.53rem;letter-spacing:0.1em;color:rgba(244,241,236,0.2);text-transform:uppercase}
-    .ft-brand a{color:var(--accent);text-decoration:none;opacity:0.7}
-
-    .reveal{opacity:0;transform:translateY(26px);transition:opacity 0.65s ease,transform 0.65s ease}
-    .reveal.in{opacity:1;transform:translateY(0)}
-
-    #install-banner{position:fixed;bottom:0;left:0;right:0;background:var(--bg2);border-top:1px solid var(--border-accent);padding:13px 17px;display:flex;align-items:center;gap:11px;z-index:50;transform:translateY(100%);transition:transform 0.4s ease}
-    #install-banner.show{transform:translateY(0)}
-    .toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--bg2);border:1px solid var(--border-accent);color:var(--white);padding:11px 22px;border-radius:50px;font-size:0.72rem;z-index:200;transition:transform 0.4s cubic-bezier(0.34,1.56,0.64,1)}
-    .toast.show{transform:translateX(-50%) translateY(0)}
+    footer{padding:30px 24px;text-align:center;border-top:1px solid rgba(244,241,236,0.08);font-size:0.7rem;opacity:0.6;}
+    footer a{color:var(--accent);text-decoration:none;}
   </style>
 </head>
 <body>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <nav class="hero-nav">
-    <div class="logo-block">
-      <div class="logo-ldr">LDR</div>
-      <div class="logo-name">Luis Del Rio</div>
-      <div class="logo-role">Consultor</div>
-    </div>
+    <div class="logo-ldr">LDR</div>
   </nav>
   <div class="hero-content">
-    <p class="hero-tag">Consultoría profesional · Colombia</p>
     <h1 class="hero-title">CONSTRUIMOS<br><span>TU VISIÓN</span></h1>
-    <p class="hero-sub">Diseño estructural, obra civil y soluciones ambientales integrales para proyectos que trascienden.</p>
-    <div class="hero-cta">
-      <a href="https://wa.me/573145959767" class="btn-primary" target="_blank" rel="noopener">📲 Contáctame</a>
-      <a href="#servicios" class="btn-outline">Ver servicios</a>
-    </div>
+    <a href="https://wa.me/573145959767" class="btn-primary" target="_blank">Contactar</a>
   </div>
 </section>
 
-<!-- STATS -->
-<div class="stats">
-  <div class="stat reveal"><div class="stat-n">8+</div><div class="stat-l">Servicios especializados</div></div>
-  <div class="stat reveal" style="transition-delay:.1s"><div class="stat-n">2</div><div class="stat-l">Áreas de consultoría</div></div>
-  <div class="stat reveal" style="transition-delay:.2s"><div class="stat-n">CAR</div><div class="stat-l">Certificado</div></div>
-</div>
-
-<!-- SERVICIOS CONSTRUCCION -->
-<section class="sec" id="servicios">
-  <div class="reveal">
-    <p class="eyebrow">Área de construcción</p>
-    <h2 class="sec-title">NUESTROS<br>SERVICIOS</h2>
-    <div class="divider"></div>
-  </div>
-  <div class="srv-grid">
-    <div class="srv-card reveal"><span class="srv-ico">🏗️</span><div class="srv-name">Diseño Estructural</div></div>
-    <div class="srv-card reveal"><span class="srv-ico">👷</span><div class="srv-name">Obra Civil</div></div>
-    <div class="srv-card reveal"><span class="srv-ico">📐</span><div class="srv-name">Diseño Arquitectónico</div></div>
-    <div class="srv-card reveal"><span class="srv-ico">🛋️</span><div class="srv-name">Obra Blanca</div></div>
-  </div>
-</section>
-
-<!-- AMBIENTAL -->
-<section class="amb-sec" id="ambiental">
+<section class="amb-sec">
   <div class="amb-img-wrap">
-    <!-- Reemplazar con WhatsApp Image 2026-05-14 at 9.06.53 AM (1).jpeg -->
-    <img class="amb-img" src="ambiental_vibrante.jpg" alt="Soluciones Ambientales LDR"/>
+    <!-- Ruta para WhatsApp Image 2026-05-14 at 9.06.53 AM (1).jpeg -->
+    <img class="amb-img" src="foto2.jpeg" alt="Ambiental"/>
     <div class="amb-img-ov"></div>
-    <div class="amb-badge">🌿 Ambiental</div>
   </div>
-  <div style="padding:0 24px 52px">
-    <div class="reveal">
-      <p class="eyebrow">Área ambiental</p>
-      <div class="amb-title">SOLUCIONES<br>AMBIENTALES<br><span class="g">INTEGRALES</span></div>
-      <div class="divider" style="background:var(--green)"></div>
-      <p class="amb-desc">Expertos en sistemas de saneamiento hidrosanitario y tratamiento de aguas residuales.</p>
-    </div>
-    <div class="amb-list">
-      <div class="amb-item reveal">
-        <span class="amb-ico">🛠️</span>
-        <div class="amb-txt"><strong>Diseño e Ingeniería Hidrosanitaria</strong>Certificada y avalada por entes reguladores.</div>
-      </div>
-      <div class="amb-item reveal">
-        <span class="amb-ico">🚚</span>
-        <div class="amb-txt"><strong>Suministro e Instalación</strong>Equipos y tanques para sistemas de tratamiento.</div>
-      </div>
-      <div class="amb-item reveal">
-        <span class="amb-ico">🛢️</span>
-        <div class="amb-txt"><strong>Limpieza Industrial</strong>Con certificación de disposición final.</div>
-      </div>
-    </div>
-    <div class="car-tag reveal">🌿 Certificado ante la CAR · Entidades Ambientales</div>
-  </div>
+  <div class="amb-title">SOLUCIONES<br>AMBIENTALES<br><span class="g">INTEGRALES</span></div>
+  <div class="car-tag">🌿 Certificado ante la CAR</div>
 </section>
 
-<!-- CONTACTO -->
-<section class="contact-sec" id="contacto">
-  <div class="reveal">
-    <p class="eyebrow">Hablemos</p>
-    <h2 class="sec-title">CONTACTO</h2>
-    <div class="divider"></div>
-  </div>
-  <div class="ct-cards reveal">
-    <a class="ct-card" href="https://wa.me/573145959767" target="_blank">
-      <div class="ct-ico ci-wa">📲</div>
-      <div class="ct-meta"><div class="ct-label">WhatsApp</div><div class="ct-val">314 595 9767</div></div>
-    </a>
-    <a class="ct-card" href="mailto:luisdelrio3@gmail.com">
-      <div class="ct-ico ci-mail">✉️</div>
-      <div class="ct-meta"><div class="ct-label">Email</div><div class="ct-val">luisdelrio3@gmail.com</div></div>
-    </a>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
-  <div class="ft-logo">LDR</div>
-  <div class="ft-sub">Luis Del Rio · Consultor</div>
-  <p class="ft-brand">Desarrollada por <a href="#">Vibras Positivas HM</a> — Derechos de Autor Reservados</p>
+  <p>Desarrollada por <a href="https://wa.me/573117700431">Vibras Positivas HM</a></p>
 </footer>
 
-<div id="install-banner">
-  <p><strong>Instalar app LDR</strong>Acceso directo desde tu pantalla</p>
-  <button class="btn-inst" id="btn-install">Instalar</button>
-</div>
-<div class="toast" id="toast"></div>
-
 <script>
-var io2=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io2.unobserve(e.target)}})},{threshold:0.1});
-document.querySelectorAll('.reveal').forEach(function(r){io2.observe(r)});
+  if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js');}
 </script>
 </body>
 </html>
